@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
 	vb.gui = false
 	vb.customize ["modifyvm", :id, "--memory", 2048]
+	vb.customize ["modifyvm", :id, "--cpus", 2]
 	#Configures the 2nd network card as bridged
 	vb.customize ["modifyvm", :id, "--nic2", "bridged"]
 	vb.customize ["modifyvm", :id, "--nictype2", "virtio"]
