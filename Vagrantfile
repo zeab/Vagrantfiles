@@ -4,6 +4,8 @@
 Vagrant.configure("2") do |config|
   #Enter the name of the vagrant box here 
   config.vm.box = "zeab/ub-16.04-64x-base"
+  #Uncomment to mount another folder besides the defualt vagrant folder
+  #config.vm.synced_folder "C:/Some/Host/Folder", "/Some/Location/In/VM"
   config.vm.provider "virtualbox" do |vb|
 	vb.gui = false
 	vb.customize ["modifyvm", :id, "--memory", 2048]
