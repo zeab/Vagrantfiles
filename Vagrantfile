@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
 	vb.customize ["modifyvm", :id, "--nictype2", "virtio"]
 	#Replace the network card named here with your own local network card
 	vb.customize ["modifyvm", :id, "--bridgeadapter2", "Intel(R) Dual Band Wireless-AC 8260"] #Dell Latitude E7470
+	#vb.customize ["modifyvm", :id, "--bridgeadapter2", "Intel(R) PRO/1000 GT Desktop Adapter"] #Home Server
 	#vb.customize ["modifyvm", :id, "--bridgeadapter2", "eno1"] #Linx Server
 	end
 end
